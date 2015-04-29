@@ -7,4 +7,6 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'app.views.index', name='index'),
+    url(r'^(?P<linkid>[a-zA-Z0-9]+)$', 'app.views.view', name='view'),
 ]
